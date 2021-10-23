@@ -1,2 +1,19 @@
-<h1>Lawyer#show</h1>
-<p>Find me in app/views/lawyer/show.html.erb</p>
+<h2>Lawyers Listings</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @lawyers.each do |lawyer| %>
+	    <tr>
+	      <td><%= lawyer.name %></td>
+	      <td><%= lawyer.email %></td>
+	      <td><%= lawyer.phone %></td>
+	    </tr>
+	  <% end %>
+  </tbody>
+</table>
